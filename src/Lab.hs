@@ -36,7 +36,9 @@ e7 :: Expr (String, Int)
 e7 = Add e6 e6
 
 instance Foldable Expr where
-    foldr = undefined
+  --foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b
+    foldr f z (Val i) = i
+    foldr f z (Var x) = 
 
 --------------------------------------------------------------------------------
 
